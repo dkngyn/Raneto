@@ -29,12 +29,12 @@
   "bin": "./bin/raneto",
   "main": "./app/index.js",
   "scripts": {
-    "start": "DEBUG=raneto node example/server.js",
-    "start_win": "set DEBUG=raneto&&node example/server.js",
+    "start": "DEBUG=raneto node server.js",
+    "start_win": "set DEBUG=raneto&&node server.js",
     "test": "npm run lint && mocha --reporter spec test/*.js",
     "postinstall": "npm run gulp",
     "gulp": "gulp",
-    "lint": "./node_modules/.bin/eslint bin/*.js app/**/*.js example/**/*.js test/*.js translate/*.json gulpfile.js"
+    "lint": "./node_modules/.bin/eslint bin/*.js app/**/*.js ./*.js test/*.js translate/*.json gulpfile.js"
   },
   "engines": {
     "node": ">=4.0.0"
