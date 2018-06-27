@@ -82,7 +82,7 @@ if (config.googleoauth === true) {
   res.redirect('/login');
 }
 else {
-  res.redirect(403, '/login');  
+  res.redirect(403, '/login');
 }
 ```
 
@@ -254,7 +254,7 @@ module.exports = {
 };
 ```
 
-This is a changed file based on the [Google Node.js official example](https://raw.githubusercontent.com/GoogleCloudPlatform/nodejs-getting-started/master/4-auth/lib/oauth2.js) file. Notable differences are in Google strategy settings which basically load settings from our settings config: 
+This is a changed file based on the [Google Node.js official example](https://raw.githubusercontent.com/GoogleCloudPlatform/nodejs-getting-started/master/4-auth/lib/oauth2.js) file. Notable differences are in Google strategy settings which basically load settings from our settings config:
 
 ```
 clientID: config.oauth2.client_id,

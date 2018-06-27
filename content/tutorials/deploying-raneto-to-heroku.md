@@ -31,10 +31,10 @@ Just follow the instructions.
 
 ## Clone Raneto and make edits
 
-Heroku works by deploying a Git repository to their servers.  
-So we need to make your Raneto install is a Git repository.  
-This also means you will need to commit any changes you make to Git before deploying them to Heroku.  
-Thankfully this is easy to setup:  
+Heroku works by deploying a Git repository to their servers.
+So we need to make your Raneto install is a Git repository.
+This also means you will need to commit any changes you make to Git before deploying them to Heroku.
+Thankfully this is easy to setup:
 
     $ git clone https://github.com/gilbitron/Raneto.git
     $ cd Raneto/
@@ -42,7 +42,7 @@ Thankfully this is easy to setup:
     $ git add content/
     $ git commit -m "My Changes"
 
-Remember you will need to `git commit` any future changes you make before deployment.  
+Remember you will need to `git commit` any future changes you make before deployment.
 **NOTE: In the near future, we will isolate Raneto code from your documentation content (coming soon)**
 
 ## Deploy Raneto to Heroku

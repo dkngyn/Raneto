@@ -6,7 +6,7 @@ Sort: 2
 Once you are sure you have met the [minimum requirements](%base_url%/install/requirements) you can install
 Raneto by following these steps:
 
-It is recommended to create a new Git repository to store your documentation files and then install Raneto as a dependency into it.  
+It is recommended to create a new Git repository to store your documentation files and then install Raneto as a dependency into it.
 See the `example/` directory for how this implementation works.
 
 1. Switch to your existing or new project directory
