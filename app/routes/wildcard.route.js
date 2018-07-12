@@ -27,7 +27,7 @@ function route_wildcard (config) {
     var slug   = req.params[0];
     if (slug === '/') { slug = '/index'; }
 
-    var file_path      = path.normalize(config.content_dir + slug);
+    var file_path      = path.normalize(config.content_dir + slug).replace(/\/$|\\$/g, '');
     var file_path_orig = file_path;
 
     // Remove "/edit" suffix
