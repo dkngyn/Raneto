@@ -41,6 +41,7 @@ function initialize (config) {
   var route_wildcard            = require('./routes/wildcard.route.js')                 (config);
   var route_sitemap             = require('./routes/sitemap.route.js')                  (config);
   var route_admincp             = require('./routes/admincp.route.js')                  (config);
+  var route_admincp_scan        = require('./routes/admincp_scan.route.js')                  (config);
 
   // New Express App
   var app = express();
@@ -95,7 +96,6 @@ function initialize (config) {
     router.post('/rn-login', route_login);
     router.get('/logout', route_logout);
     router.get('/login', route_login_page);
-
   }
 
   // Online Editor Routes
@@ -114,6 +114,8 @@ function initialize (config) {
     router.post('/rn-add-page',     middlewareToUse, route_page_create);
     router.post('/rn-add-category', middlewareToUse, route_category_create);
     router.get('/admincp', middlewareToUse, route_admincp);
+    router.get('/admincp/scan', middlewareToUse, route_admincp_scan);
+
 
   }
 
