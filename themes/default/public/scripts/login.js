@@ -25,17 +25,17 @@ jQuery(document).ready(function () {
       if ($('.input-error').length === 0) {
         $.post('/rn-login', $(this).serialize(), function (data) {
 
-          swal({
-            type              : data.status ? 'success' : 'warning',
-            title             : data.message,
-            timer             : data.status ? 2000 : null,
-            showConfirmButton : true
-          });
+          // swal({
+          //   type              : data.status ? 'success' : 'warning',
+          //   title             : data.message,
+          //   timer             : data.status ? 2000 : null,
+          //   showConfirmButton : true
+          // });
 
           if (data.status) {
             window.setTimeout(function () {
-              window.location = '/';
-            }, 1500);
+              window.location = '/admincp';
+            }, 1000);
           }
 
         });
