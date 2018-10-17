@@ -26,7 +26,7 @@ function initialize (config) {
   // Load Files
   var authenticate              = require('./middleware/authenticate.js')               (config);
   var always_authenticate       = require('./middleware/always_authenticate.js')        (config);
-  var authenticate_read_access  = require ('./middleware/authenticate_read_access.js')  (config);
+  var authenticate_read_access  = require('./middleware/authenticate_read_access.js')   (config);
   var error_handler             = require('./middleware/error_handler.js')              (config);
   var oauth2                    = require('./middleware/oauth2.js');
   var route_login               = require('./routes/login.route.js')                    (config);
@@ -40,6 +40,7 @@ function initialize (config) {
   var route_home                = require('./routes/home.route.js')                     (config);
   var route_wildcard            = require('./routes/wildcard.route.js')                 (config);
   var route_sitemap             = require('./routes/sitemap.route.js')                  (config);
+  var route_admincp             = require('./routes/admincp.route.js')                  (config);
 
   // New Express App
   var app = express();
@@ -93,7 +94,8 @@ function initialize (config) {
 
     router.post('/rn-login', route_login);
     router.get('/logout', route_logout);
-    router.get('/login',     route_login_page);
+    router.get('/login', route_login_page);
+
   }
 
   // Online Editor Routes
@@ -111,6 +113,7 @@ function initialize (config) {
     router.post('/rn-delete',       middlewareToUse, route_page_delete);
     router.post('/rn-add-page',     middlewareToUse, route_page_create);
     router.post('/rn-add-category', middlewareToUse, route_category_create);
+    router.get('/admincp', middlewareToUse, route_admincp);
 
   }
 
