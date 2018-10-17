@@ -24,8 +24,9 @@
     <!-- Main -->
     <h3>admin control panel</h3>
     {{#config.authentication}}
-    {{#loggedIn}}
     <p>hello {{username}}</p>
+    {{#loggedIn}}
+    <p>logged in</p>
     {{/loggedIn}}
     {{^loggedIn}}
     <p>not logged in</p>
