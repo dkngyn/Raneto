@@ -78,7 +78,7 @@ var config = {
   credentials    : [
     {
       username : 'admin',
-      password : 'password'
+      password : 'admin'
     },
     {
       username : 'admin2',
