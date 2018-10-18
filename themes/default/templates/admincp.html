@@ -22,16 +22,24 @@
 
 <body class="{{body_class}}">
     <!-- Main -->
-    <h3>admin control panel</h3>
-    {{#config.authentication}}
-    <p>hello {{username}}</p>
-    {{#loggedIn}}
-    <p>logged in</p>
-    {{/loggedIn}}
-    {{^loggedIn}}
-    <p>not logged in</p>
-    {{/loggedIn}}
-    {{/config.authentication}}
+    <main class="container-fluid">
+        <div style="text-align: center;"><h3>admin control panel</h3>
+            {{#config.authentication}}
+            {{#loggedIn}}
+            <p>hello {{username}}</p>
+            {{/loggedIn}}
+            {{/config.authentication}}
+        </div>
+        <div style="width: 480px; margin: 25px auto;">
+            <div class="filemanager js-filemanager">
+                <div class="breadcrumb js-breadcrumb"></div>
+                <ul class="content js-content"></ul>
+                <div class="nothingfound js-nothingfound">
+                    <span>No files here.</span>
+                </div>
+            </div>
+        </div>
+    </main>
     <!-- Footer -->
     <footer class="footer">
         <div class="container-fluid">
@@ -45,7 +53,7 @@
     <script src="{{config.base_url}}/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="{{config.base_url}}/lib/jquery-backstretch/jquery.backstretch.min.js"></script>
     <script src="{{config.base_url}}/lib/sweetalert2/dist/sweetalert2.all.min.js"></script>
-    <script src="{{config.base_url}}/scripts/login.js"></script>
+    <script src="{{config.base_url}}/scripts/admincp.js"></script>
 </body>
 
 </html>
