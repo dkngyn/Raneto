@@ -1,6 +1,7 @@
 'use strict';
 
 const fs = require('fs');
+const path = require('path');
 
 function route_admincp_scan(config) {
 	return function(req, res, next) {
@@ -8,6 +9,7 @@ function route_admincp_scan(config) {
 		function scan(dir, alias) {
 
 			function walk(dir, prefix) {
+				dir = path.basename(dir);
 				prefix = prefix || '';
 
 				if(!fs.existsSync(dir)){
