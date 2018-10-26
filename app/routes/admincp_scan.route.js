@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 function route_admincp_scan(config) {
+
 	return function(req, res, next) {
 
 		function scan(dir, alias) {
@@ -27,6 +28,7 @@ function route_admincp_scan(config) {
 							name: f,
 							type: 'folder',
 							path: p,
+							mtime: stat.mtime,
 							items: walk(p, prefix)
 						};
 					}
@@ -35,6 +37,7 @@ function route_admincp_scan(config) {
 						name: f,
 						type: 'file',
 						path: p,
+						mtime: stat.mtime,
 						size: stat.size
 					}
 				});
@@ -52,6 +55,5 @@ function route_admincp_scan(config) {
 		res.json(tree);
 	};
 };
-
 
 module.exports = route_admincp_scan;

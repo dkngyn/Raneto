@@ -41,7 +41,7 @@ function initialize (config) {
   var route_wildcard            = require('./routes/wildcard.route.js')                 (config);
   var route_sitemap             = require('./routes/sitemap.route.js')                  (config);
   var route_admincp             = require('./routes/admincp.route.js')                  (config);
-  var route_admincp_scan        = require('./routes/admincp_scan.route.js')                  (config);
+  var route_admincp_scan        = require('./routes/admincp_scan.route.js')             (config);
 
   // New Express App
   var app = express();
