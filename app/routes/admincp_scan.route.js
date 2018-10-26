@@ -10,7 +10,6 @@ function route_admincp_scan(config) {
 		function scan(dir, alias) {
 
 			function walk(dir, prefix) {
-				dir = path.basename(dir);
 				prefix = prefix || '';
 
 				if(!fs.existsSync(dir)){
@@ -51,7 +50,7 @@ function route_admincp_scan(config) {
 			};
 		};
 
-		var tree = scan(config.content_dir, 'content');
+		var tree = scan(path.basename(config.content_dir), 'content');
 		res.json(tree);
 	};
 };
